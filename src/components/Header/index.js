@@ -105,6 +105,19 @@ const HamburgerBtn = styled.button`
   margin-top: 0rem;
   transition: all 0.3s;
   cursor: pointer;
+  
+
+  span{
+    background-color: var(--white);
+    width: 2rem;
+    height: 2px;
+    display: ${(props) => (props.clicked ? "none" : "block")};
+    top: ${(props) => (props.clicked ? "0" : "0rem")};
+    position: absolute;
+    left: 0;
+    
+    
+  }
   &::before,
   &::after {
     content: "";
@@ -125,6 +138,8 @@ const HamburgerBtn = styled.button`
     top: ${(props) => (props.clicked ? "0" : "0.5rem")};
     transform: ${(props) => (props.clicked ? "rotate(-135deg)" : "rotate(0)")};
   }
+  
+  
 `;
 
 const MobileMenu = styled.nav`
